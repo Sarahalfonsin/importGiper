@@ -1,0 +1,33 @@
+<div class="main-page">
+  <p class="main-bienvenida"> ¡Hola! Antes que nada contanos,
+    ¿qué vas a publicar? </p>
+  <div class="container-type">
+  <div class="tipo">
+    <mat-icon class="tipo__icon">local_grocery_store</mat-icon>
+    <p> Pedido Minorista</p>
+  </div>
+  <div class="tipo">
+    <mat-icon class="tipo__icon">widgets</mat-icon>
+    <p> Pedidos Mayorista</p>
+  </div>
+  <div (click)="redirigir()" class="tipo">
+    <mat-icon class="tipo__icon">widgets</mat-icon>
+    <p >Mercado Libre</p>
+  </div>
+</div>
+  <!-- <form>
+    <mat-form-field>
+      <input matInput placeholder="Nombre del producto">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Precio del producto">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Cantidad del producto">
+    </mat-form-field>
+    <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+
+    <button mat-raised-button color="primary">Crear</button>
+  </form> -->
+</div>

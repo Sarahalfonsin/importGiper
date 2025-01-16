@@ -1,0 +1,28 @@
+.app-background {
+  height: 100%;
+}
+.side-bar {
+  height: 100%;
+  background-color: #ededed;
+}
+main {
+  background-color: #ededed !important;
+}
+.nav-bar {
+  color: white;
+  background-color: #ff934d;
+}
+
+footer {
+  background-color: #ff934d;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .nav-textn {
+    display: none;
+  }
+}

@@ -1,0 +1,52 @@
+<div class="app-background">
+  <mat-toolbar class="nav-bar mat-elevation-z8" >
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1><button routerLink="/" mat-button>IMPORT GIPER</button></h1>
+  <div class="nav-textn">
+    <button [matMenuTriggerFor]="lvl1master" mat-button>Gestion</button>
+    <mat-menu #lvl1master="matMenu">
+        <button  routerLink="/cargar-producto" mat-menu-item>Cargar productos</button>
+        <button routerLink="" mat-menu-item>Crear Clientes</button>
+        <button  routerLink="" mat-menu-item>Crear Ventas</button>
+    </mat-menu>
+
+    <button routerLink="input" mat-button>Pedidos</button>
+    <button routerLink="autocomplete" mat-button>Facturacion</button>
+  </div>
+
+  </mat-toolbar>
+  <mat-drawer-container autosize class="side-bar">
+    <mat-drawer #drawer opened="false" mode="side" position="start">
+    <mat-nav-list>
+        <mat-list-item>
+            <button routerLink="card" mat-button><mat-icon>dashboard</mat-icon>Crear Productos </button>
+        </mat-list-item>
+
+        <mat-list-item>
+            <button routerLink="slider" mat-button><mat-icon>person_add</mat-icon>Cargar Clientes</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button routerLink="table" mat-button><mat-icon>local_grocery_store</mat-icon>Crear ventas</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button><mat-icon>featured_play_list</mat-icon> Pedidos</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button><mat-icon>account_balance</mat-icon> Facturacion</button>
+        </mat-list-item>
+    </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content >
+
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <footer>
+    <p>
+      Copyright ©2025 Import Giper Todos los derechos reservados.</p>
+  </footer>
+</div>
